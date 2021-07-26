@@ -1,26 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-export const Nav = () => {
+export const Navigation = () => {
   return (
     <>
-      <ul className="navbar">
-        <li className="nav-item active">
-          <Link className="nav-link" to="/">
-            Grid Page
-          </Link>
-        </li>
-        <li className="nav-item active">
-          <Link className="nav-link" to="/collateral">
-            Collateral
-          </Link>
-        </li>
-        <li className="nav-item active">
-          <Link className="nav-link" to="/loans">
-            Loans
-          </Link>
-        </li>
-      </ul>
+      <Navbar bg="light" variant="light">
+        <Container>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Grid Page</Nav.Link>
+            <Nav.Link href="/collateral">Collateral</Nav.Link>
+            <Nav.Link href="/loans">Loans</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     </>
   );
 };

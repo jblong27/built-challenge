@@ -25,22 +25,22 @@ let initialState: budgetState = {
 export const BudgetReducer = createSlice({
   name: "budgets",
   initialState,
+  //could also probably do a switch case here
   reducers: {
     addBudget: (state, action) => {
       state.value = [...state.value, action.payload];
     },
     deleteBudget: (state, action) => {
-      return {
-        ...state,
-        value: state.value.filter((value, index) => index !== action.payload),
-        // editBudget : (state, action) => {
-
-        // }
-      };
+    //   // return state.value.filter((state) => state.value !== action.payload)
+    //   // delete state.value.
+    // }
     },
-  },
+    editBudget: (state, action) => {
+
+    },
+    },
 });
 
-export const { addBudget, deleteBudget } = BudgetReducer.actions;
+export const { addBudget, deleteBudget, editBudget } = BudgetReducer.actions;
 export const selectBudget = (state: RootState) => state.budgets.value;
 export default BudgetReducer.reducer;

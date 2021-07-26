@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Loan } from "../reducers/LoansReducer";
 import { RootState } from "../app/store";
 import { connect } from "react-redux";
@@ -12,11 +12,17 @@ interface Props {
 }
 class LoansPage extends React.Component<Props> {
   render() {
-    return (
-      <>
-        <h1>Loans</h1>
-      </>
-    );
+    return (<>
+    <h1>Loans</h1>
+    {this.props.loans.map((loans: Loan) => {
+      return (
+        <div key={"loans" + loans.id}>
+          <h5>{loans.lender}: </h5>
+          <p>Current interest rate: {loans.interest}</p>
+        </div>
+      )
+    })}
+    </>)
   }
 }
 
