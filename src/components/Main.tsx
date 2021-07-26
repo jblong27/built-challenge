@@ -1,8 +1,9 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { GridPage } from "./GridPage";
-import { Loans } from "./Loans";
+import LoansPage from "./LoansPage";
 import CollateralPage from "./CollateralPage";
+
 
 export const Main = () => {
   return (
@@ -11,7 +12,7 @@ export const Main = () => {
         <GridPage />
       </Route>
       <Route exact path="/loans">
-        <Loans />
+        <LoansPage />
       </Route>
       <Route exact path="/collateral">
         <CollateralPage />
