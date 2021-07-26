@@ -7,16 +7,16 @@ export const Nav = () => {
       <ul className="navbar">
         <li className="nav-item active">
           <Link className="nav-link" to="/">
-            Home
+            Grid Page
           </Link>
         </li>
         <li className="nav-item active">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/collateral">
             Collateral
           </Link>
         </li>
         <li className="nav-item active">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/loans">
             Loans
           </Link>
         </li>
