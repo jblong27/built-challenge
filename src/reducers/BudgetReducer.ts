@@ -32,17 +32,15 @@ export const BudgetReducer = createSlice({
     deleteBudget: (state, action) => {
       return {
         ...state,
-        value: state.value.filter(
-          (value, index) => index !== action.payload
-        ),
-    // editBudget : (state, action) => {
+        value: state.value.filter((value, index) => index !== action.payload),
+        // editBudget : (state, action) => {
 
-    // }
+        // }
       };
-    }
+    },
   },
 });
 
 export const { addBudget, deleteBudget } = BudgetReducer.actions;
 export const selectBudget = (state: RootState) => state.budgets.value;
-export default BudgetReducer.reducer; 
+export default BudgetReducer.reducer;

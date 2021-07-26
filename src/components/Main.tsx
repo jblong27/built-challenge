@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { GridPage } from "./GridPage";
 import { Loans } from "./Loans";
-import { Collateral } from "./Collateral";
+import CollateralPage from "./CollateralPage";
 
 export const Main = () => {
   return (
@@ -14,7 +14,7 @@ export const Main = () => {
         <Loans />
       </Route>
       <Route exact path="/collateral">
-        <Collateral />
+        <CollateralPage />
       </Route>
     </>
   );
