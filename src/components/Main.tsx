@@ -2,7 +2,7 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { GridPage } from "./GridPage";
 import LoansPage from "./LoansPage";
-import CollateralPage from "./CollateralPage";
+import { CollateralPage } from "./CollateralPage";
 
 
 export const Main = () => {

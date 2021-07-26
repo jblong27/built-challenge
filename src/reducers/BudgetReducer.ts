@@ -1,5 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk, RootState } from "../app/store";
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../app/store";
 
 export interface Budget {
   id: number;
@@ -15,9 +15,9 @@ let initialState: budgetState = {
   value: [
     { id: 0, total: 10000, project: "Highschool reunion" },
     { id: 1, total: 35000, project: "Art installation" },
-    { id: 2, total: 40000, project: "Misc." },
-    { id: 3, total: 50000, project: "Misc." },
-    { id: 4, total: 55000, project: "Misc." },
+    { id: 2, total: 40000, project: "Construction." },
+    { id: 3, total: 50000, project: "Festival." },
+    { id: 4, total: 55000, project: "New car." },
     { id: 5, total: 60000, project: "Misc." },
   ],
 };
@@ -36,8 +36,12 @@ export const BudgetReducer = createSlice({
     // }
     },
     editBudget: (state, action) => {
-
-    },
+      if (action.payload !== '') {
+        const newArray = [...state.value];
+        newArray.push(action.payload);
+        return { ...state, value: newArray }
+        }
+      }
     },
 });
 

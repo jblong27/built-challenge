@@ -1,11 +1,11 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk, RootState } from "../app/store";
+import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../app/store";
 
 export interface Collateral {
   id: number;
   name: string;
-  total: number;
-  description: string;
+  item: string;
+  value: number;
 }
 
 interface collateralState {
@@ -14,10 +14,10 @@ interface collateralState {
 
 let initialState: collateralState = {
   value: [
-    { id: 0, name: "John", total: 20000, description: "car" },
-    { id: 1, name: "Dan", total: 20000, description: "boat" },
-    { id: 2, name: "Lisa",total: 20000, description: "truck" },
-    { id: 3, name: "Tina", total: 20000, description: "black lotus" },
+    { id: 0, name: "John", item: "car", value: 20000 },
+    { id: 1, name: "Dan", item: "boat", value: 20000 },
+    { id: 2, name: "Lisa", item: "truck", value: 20000 },
+    { id: 3, name: "Tina", item: "black lotus", value: 20000 },
   ],
 };
 

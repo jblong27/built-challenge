@@ -30,11 +30,10 @@ export const GridPage = () => {
       newBudget
     );
     stateUpdate[evt.target.name] = evt.target.value;
-    console.log(stateUpdate);
     setNewBudget(stateUpdate);
   };
-    //https://www.ag-grid.com/javascript-grid/value-getters/
-  //just getting the value of the column ID
+  //https://www.ag-grid.com/javascript-grid/value-getters/
+  //just getting the value of the row by column ID
   const valGet = (params: ValueGetterParams) => {
     return params.data[params.column.getColId()];
   };
@@ -44,10 +43,10 @@ export const GridPage = () => {
       data: params.data,
       colId: params.column.getColId(),
       new_value: params.newValue,
-      row_index: params.node?.rowIndex
+      row_index: params.node?.rowIndex,
     };
     dispatch(editBudget(params_obj));
-    console.log(params_obj)
+    console.log(params_obj);
     return true;
   };
 
@@ -106,8 +105,7 @@ export const GridPage = () => {
             editable={true}
             field="project"
           ></AgGridColumn>
-          <AgGridColumn
-            ></AgGridColumn>
+          <AgGridColumn></AgGridColumn>
         </AgGridReact>
       </div>
     </>
