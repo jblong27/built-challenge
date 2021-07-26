@@ -19,6 +19,10 @@ let initialState: budgetState = {
     { id: 3, total: 50000, project: "Festival." },
     { id: 4, total: 55000, project: "New car." },
     { id: 5, total: 60000, project: "Misc." },
+    { id: 6, total: 60000, project: "Misc." },
+    { id: 7, total: 60000, project: "Misc." },
+    { id: 8, total: 60000, project: "Misc." },
+    { id: 9, total: 60000, project: "Misc." },
   ],
 };
 //createSlice takes name, initialState and reducers as params
