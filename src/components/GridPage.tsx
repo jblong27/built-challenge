@@ -29,13 +29,14 @@ export const GridPage = () => {
       {},
       newBudget
     );
+    console.log(stateUpdate)
     stateUpdate[evt.target.name] = evt.target.value;
     setNewBudget(stateUpdate);
   };
   //https://www.ag-grid.com/javascript-grid/value-getters/
   //just getting the value of the row by column ID
   const valGet = (params: ValueGetterParams) => {
-    return params.data[params.column.getColId()];
+    return (params.data[params.column.getColId()]);
   };
   //valueSetter to allow editing on the grid
   const valSet = (params: ValueSetterParams) => {

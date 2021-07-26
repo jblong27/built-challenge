@@ -32,7 +32,13 @@ export const BudgetReducer = createSlice({
   //could also probably do a switch case here
   reducers: {
     addBudget: (state, action) => {
-      state.value = [...state.value, action.payload];
+      const previousId = 9;
+      if (action.payload.id <= previousId) {
+        throw new Error('That row already exists');
+      } else {
+
+        state.value = [...state.value, action.payload];
+      }
     },
     deleteBudget: (state, action) => {
     //   // return state.value.filter((state) => state.value !== action.payload)
